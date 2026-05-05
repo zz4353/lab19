@@ -23,7 +23,4 @@ python build_graph.py
 
 # 2. Chạy benchmark
 python run_benchmark.py
-
-# 3. Xem kết quả
-python compare_results.py
 ```
