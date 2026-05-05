@@ -1,0 +1,24 @@
+# Core dependencies
+neo4j==5.14.1
+openai==1.12.0
+chromadb==0.4.22
+langchain==0.1.6
+langchain-openai==0.0.5
+
+# Data processing and visualization
+pandas==2.1.4
+matplotlib==3.8.2
+numpy==1.26.3
+
+# Configuration and utilities
+pyyaml==6.0.1
+python-dotenv==1.0.0
+
+# Testing
+pytest==7.4.3
+pytest-cov==4.1.0
+pytest-mock==3.12.0
+hypothesis==6.92.2
+
+# Retry logic
+tenacity==8.2.3

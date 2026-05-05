@@ -1,0 +1,41 @@
+# GraphRAG System Configuration
+
+# Neo4j Configuration
+neo4j:
+  uri: "bolt://localhost:7687"
+  user: "neo4j"
+  password: "password"  # Change this to your Neo4j password
+
+# OpenAI Configuration
+openai:
+  api_key: ""  # Add your OpenAI API key here or use .env
+  model: "gpt-4o-mini"
+  temperature: 0.0
+  max_tokens: 2000
+
+# Data Configuration
+data:
+  data_dir: "data/"
+
+# Flat RAG Configuration
+flatrag:
+  chunk_size: 512
+  chunk_overlap: 50
+  top_k: 5
+  vector_store_type: "chromadb"
+  embedding_model: "text-embedding-3-small"
+
+# GraphRAG Configuration
+graphrag:
+  subgraph_hops: 2
+
+# Evaluation Configuration
+evaluation:
+  benchmark_questions_path: "benchmark_questions.json"
+  output_dir: "output/"
+
+# Logging Configuration
+logging:
+  log_level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  debug_mode: false
+  log_file: "graphrag.log"

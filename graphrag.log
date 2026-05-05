@@ -1,0 +1,341 @@
+2026-05-05 11:12:06,534 - __main__ - INFO - Loading configuration...
+2026-05-05 11:12:06,535 - __main__ - ERROR - Configuration error: Configuration file not found: config.yaml
+2026-05-05 11:25:44,403 - __main__ - INFO - Loading configuration...
+2026-05-05 11:25:44,406 - __main__ - INFO - Configuration validated successfully
+2026-05-05 11:25:44,407 - __main__ - INFO - Initializing OpenAI client with model: gpt-4o-mini
+2026-05-05 11:25:44,525 - src.data_loader - INFO - DataLoader initialized with directory: data/
+2026-05-05 11:25:44,526 - src.entity_extractor - INFO - EntityExtractor initialized with model: gpt-4o-mini
+2026-05-05 11:25:48,635 - src.graph_builder - ERROR - Failed to connect to Neo4j: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+2026-05-05 11:25:48,643 - __main__ - ERROR - Neo4j connection error: Cannot connect to Neo4j at bolt://localhost:7687: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
+2026-05-05 11:25:48,644 - __main__ - ERROR - Make sure Neo4j is running and credentials are correct
+2026-05-05 11:26:51,833 - __main__ - INFO - Loading configuration...
+2026-05-05 11:26:51,837 - __main__ - INFO - Configuration validated successfully
+2026-05-05 11:26:51,837 - __main__ - INFO - Initializing OpenAI client with model: gpt-4o-mini
+2026-05-05 11:26:51,910 - src.data_loader - INFO - DataLoader initialized with directory: data/
+2026-05-05 11:26:51,910 - src.entity_extractor - INFO - EntityExtractor initialized with model: gpt-4o-mini
+2026-05-05 11:26:52,095 - src.graph_builder - INFO - Successfully connected to Neo4j at bolt://localhost:7687
+2026-05-05 11:26:52,095 - __main__ - INFO - ============================================================
+2026-05-05 11:26:52,095 - __main__ - INFO - STEP 1: Loading markdown files
+2026-05-05 11:26:52,096 - __main__ - INFO - ============================================================
+2026-05-05 11:26:52,096 - src.data_loader - INFO - Found 5 markdown files in data/
+2026-05-05 11:26:52,096 - src.data_loader - INFO - Successfully loaded: ChatGPT.md (32942 characters)
+2026-05-05 11:26:52,097 - src.data_loader - INFO - Successfully loaded: Gemini (chatbot).md (3553 characters)
+2026-05-05 11:26:52,097 - src.data_loader - INFO - Successfully loaded: Gemini.md (18328 characters)
+2026-05-05 11:26:52,098 - src.data_loader - INFO - Successfully loaded: Google AI.md (2767 characters)
+2026-05-05 11:26:52,099 - src.data_loader - INFO - Successfully loaded: OpenAI.md (11014 characters)
+2026-05-05 11:26:52,099 - src.data_loader - INFO - Loaded 5 markdown files successfully
+2026-05-05 11:26:52,100 - __main__ - INFO - Loaded 5 markdown files
+2026-05-05 11:26:52,100 - __main__ - INFO - ============================================================
+2026-05-05 11:26:52,101 - __main__ - INFO - STEP 2: Extracting entities and relationships
+2026-05-05 11:26:52,101 - __main__ - INFO - ============================================================
+2026-05-05 11:26:52,102 - __main__ - INFO - Processing ChatGPT.md...
+2026-05-05 11:26:52,102 - src.entity_extractor - INFO - Extracting entities from ChatGPT.md (32942 characters)
+2026-05-05 11:26:52,103 - src.entity_extractor - INFO - Split into 13 chunks for processing
+2026-05-05 11:26:52,103 - src.entity_extractor - INFO - Processing chunk 1/13 (3342 characters)
+2026-05-05 11:26:59,506 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:26:59,530 - src.entity_extractor - INFO - Processing chunk 2/13 (3299 characters)
+2026-05-05 11:29:14,669 - __main__ - INFO - Loading configuration...
+2026-05-05 11:29:14,672 - __main__ - INFO - Configuration validated successfully
+2026-05-05 11:29:14,672 - __main__ - INFO - Initializing OpenAI client with model: gpt-4o-mini
+2026-05-05 11:29:14,764 - src.data_loader - INFO - DataLoader initialized with directory: data/
+2026-05-05 11:29:14,764 - src.entity_extractor - INFO - EntityExtractor initialized with model: gpt-4o-mini
+2026-05-05 11:29:14,823 - src.graph_builder - INFO - Successfully connected to Neo4j at bolt://localhost:7687
+2026-05-05 11:29:14,823 - __main__ - INFO - ============================================================
+2026-05-05 11:29:14,824 - __main__ - INFO - STEP 1: Loading markdown files
+2026-05-05 11:29:14,824 - __main__ - INFO - ============================================================
+2026-05-05 11:29:14,825 - src.data_loader - INFO - Found 5 markdown files in data/
+2026-05-05 11:29:14,826 - src.data_loader - INFO - Successfully loaded: ChatGPT.md (32942 characters)
+2026-05-05 11:29:14,826 - src.data_loader - INFO - Successfully loaded: Gemini (chatbot).md (3553 characters)
+2026-05-05 11:29:14,827 - src.data_loader - INFO - Successfully loaded: Gemini.md (18328 characters)
+2026-05-05 11:29:14,827 - src.data_loader - INFO - Successfully loaded: Google AI.md (2767 characters)
+2026-05-05 11:29:14,827 - src.data_loader - INFO - Successfully loaded: OpenAI.md (11014 characters)
+2026-05-05 11:29:14,828 - src.data_loader - INFO - Loaded 5 markdown files successfully
+2026-05-05 11:29:14,828 - __main__ - INFO - Loaded 5 markdown files
+2026-05-05 11:29:14,828 - __main__ - INFO - ============================================================
+2026-05-05 11:29:14,828 - __main__ - INFO - STEP 2: Extracting entities and relationships
+2026-05-05 11:29:14,828 - __main__ - INFO - ============================================================
+2026-05-05 11:29:14,828 - __main__ - INFO - Processing ChatGPT.md...
+2026-05-05 11:29:14,828 - src.entity_extractor - INFO - Extracting entities from ChatGPT.md (32942 characters)
+2026-05-05 11:29:14,828 - src.entity_extractor - INFO - Split into 13 chunks for processing
+2026-05-05 11:29:14,829 - src.entity_extractor - INFO - Processing chunk 1/13 (3342 characters)
+2026-05-05 11:29:21,143 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:29:21,157 - src.entity_extractor - INFO -   -> Extracted 5 triples from chunk 1
+2026-05-05 11:29:21,158 - src.entity_extractor - INFO - Processing chunk 2/13 (3299 characters)
+2026-05-05 11:29:37,358 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:29:37,361 - src.entity_extractor - INFO -   -> Extracted 15 triples from chunk 2
+2026-05-05 11:29:37,361 - src.entity_extractor - INFO - Processing chunk 3/13 (3218 characters)
+2026-05-05 11:29:50,977 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:29:51,001 - src.entity_extractor - INFO -   -> Extracted 19 triples from chunk 3
+2026-05-05 11:29:51,002 - src.entity_extractor - INFO - Processing chunk 4/13 (3218 characters)
+2026-05-05 11:39:14,585 - __main__ - INFO - Loading configuration...
+2026-05-05 11:39:14,588 - __main__ - INFO - Configuration validated successfully
+2026-05-05 11:39:14,588 - __main__ - INFO - Initializing OpenAI client with model: gpt-4o-mini
+2026-05-05 11:39:14,649 - src.data_loader - INFO - DataLoader initialized with directory: data/
+2026-05-05 11:39:14,650 - src.entity_extractor - INFO - EntityExtractor initialized with model: gpt-4o-mini
+2026-05-05 11:39:14,711 - src.graph_builder - INFO - Successfully connected to Neo4j at bolt://localhost:7687
+2026-05-05 11:39:14,711 - __main__ - INFO - ============================================================
+2026-05-05 11:39:14,712 - __main__ - INFO - STEP 1: Loading markdown files
+2026-05-05 11:39:14,712 - __main__ - INFO - ============================================================
+2026-05-05 11:39:14,712 - src.data_loader - INFO - Found 5 markdown files in data/
+2026-05-05 11:39:14,713 - src.data_loader - INFO - Successfully loaded: ChatGPT.md (32942 characters)
+2026-05-05 11:39:14,713 - src.data_loader - INFO - Successfully loaded: Gemini (chatbot).md (3553 characters)
+2026-05-05 11:39:14,713 - src.data_loader - INFO - Successfully loaded: Gemini.md (18328 characters)
+2026-05-05 11:39:14,714 - src.data_loader - INFO - Successfully loaded: Google AI.md (2767 characters)
+2026-05-05 11:39:14,715 - src.data_loader - INFO - Successfully loaded: OpenAI.md (11014 characters)
+2026-05-05 11:39:14,715 - src.data_loader - INFO - Loaded 5 markdown files successfully
+2026-05-05 11:39:14,715 - __main__ - INFO - Loaded 5 markdown files
+2026-05-05 11:39:14,715 - __main__ - INFO - ============================================================
+2026-05-05 11:39:14,715 - __main__ - INFO - STEP 2: Extracting entities and relationships
+2026-05-05 11:39:14,715 - __main__ - INFO - ============================================================
+2026-05-05 11:39:14,715 - __main__ - INFO - *** TESTING MODE: Processing only first document ***
+2026-05-05 11:39:14,716 - __main__ - INFO - Processing ChatGPT.md...
+2026-05-05 11:39:14,716 - src.entity_extractor - INFO - Extracting entities from ChatGPT.md (32942 characters)
+2026-05-05 11:39:14,717 - src.entity_extractor - INFO - Split into 13 chunks for processing
+2026-05-05 11:39:14,717 - src.entity_extractor - INFO - Processing chunk 1/13 (3342 characters)
+2026-05-05 11:39:20,835 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:39:20,844 - src.entity_extractor - INFO -   -> Extracted 4 triples from chunk 1
+2026-05-05 11:39:20,844 - src.entity_extractor - INFO - Processing chunk 2/13 (3299 characters)
+2026-05-05 11:39:31,879 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:39:31,881 - src.entity_extractor - INFO -   -> Extracted 12 triples from chunk 2
+2026-05-05 11:39:31,882 - src.entity_extractor - INFO - Processing chunk 3/13 (3218 characters)
+2026-05-05 11:39:58,575 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:40:06,819 - src.entity_extractor - INFO -   -> Extracted 25 triples from chunk 3
+2026-05-05 11:40:06,820 - src.entity_extractor - INFO - Processing chunk 4/13 (3218 characters)
+2026-05-05 11:40:20,651 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:40:20,711 - src.entity_extractor - INFO -   -> Extracted 16 triples from chunk 4
+2026-05-05 11:40:20,711 - src.entity_extractor - INFO - Processing chunk 5/13 (2707 characters)
+2026-05-05 11:40:36,199 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:40:36,201 - src.entity_extractor - INFO -   -> Extracted 11 triples from chunk 5
+2026-05-05 11:40:36,201 - src.entity_extractor - INFO - Processing chunk 6/13 (3265 characters)
+2026-05-05 11:40:49,659 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:40:49,661 - src.entity_extractor - INFO -   -> Extracted 11 triples from chunk 6
+2026-05-05 11:40:49,662 - src.entity_extractor - INFO - Processing chunk 7/13 (3192 characters)
+2026-05-05 11:41:00,742 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:41:00,744 - src.entity_extractor - INFO -   -> Extracted 10 triples from chunk 7
+2026-05-05 11:41:00,745 - src.entity_extractor - INFO - Processing chunk 8/13 (3398 characters)
+2026-05-05 11:41:10,761 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:41:10,762 - src.entity_extractor - INFO -   -> Extracted 8 triples from chunk 8
+2026-05-05 11:41:10,763 - src.entity_extractor - INFO - Processing chunk 9/13 (1182 characters)
+2026-05-05 11:41:20,854 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:41:20,856 - src.entity_extractor - INFO -   -> Extracted 9 triples from chunk 9
+2026-05-05 11:41:20,857 - src.entity_extractor - INFO - Processing chunk 10/13 (2969 characters)
+2026-05-05 11:41:42,598 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:41:42,599 - src.entity_extractor - INFO -   -> Extracted 22 triples from chunk 10
+2026-05-05 11:41:42,600 - src.entity_extractor - INFO - Processing chunk 11/13 (3044 characters)
+2026-05-05 11:41:57,553 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:41:57,557 - src.entity_extractor - INFO -   -> Extracted 17 triples from chunk 11
+2026-05-05 11:41:57,558 - src.entity_extractor - INFO - Processing chunk 12/13 (3334 characters)
+2026-05-05 11:42:13,448 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:42:13,450 - src.entity_extractor - INFO -   -> Extracted 14 triples from chunk 12
+2026-05-05 11:42:13,451 - src.entity_extractor - INFO - Processing chunk 13/13 (294 characters)
+2026-05-05 11:42:14,309 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:42:14,310 - src.entity_extractor - INFO -   -> Extracted 0 triples from chunk 13
+2026-05-05 11:42:14,311 - src.entity_extractor - INFO - Extracted 159 triples, 143 unique triples from ChatGPT.md
+2026-05-05 11:42:14,311 - __main__ - INFO -   -> Extracted 143 triples from ChatGPT.md
+2026-05-05 11:42:14,312 - __main__ - INFO - Total triples extracted: 143
+2026-05-05 11:42:14,312 - __main__ - INFO - ============================================================
+2026-05-05 11:42:14,312 - __main__ - INFO - STEP 3: Building Knowledge Graph in Neo4j
+2026-05-05 11:42:14,312 - __main__ - INFO - ============================================================
+2026-05-05 11:42:14,313 - src.graph_builder - INFO - Building graph from 143 triples
+2026-05-05 11:42:15,618 - src.graph_builder - INFO - Created index on entity name_lower
+2026-05-05 11:42:15,778 - src.graph_builder - INFO - Created index on entity type
+2026-05-05 11:42:24,267 - src.graph_builder - INFO - Processed 100/143 triples
+2026-05-05 11:42:26,115 - src.graph_builder - INFO - Processed 143/143 triples
+2026-05-05 11:42:26,287 - src.graph_builder - INFO - Graph construction complete: 154 nodes, 143 edges
+2026-05-05 11:42:26,287 - __main__ - INFO - ============================================================
+2026-05-05 11:42:26,288 - __main__ - INFO - STEP 4: Graph Statistics
+2026-05-05 11:42:26,288 - __main__ - INFO - ============================================================
+2026-05-05 11:42:26,297 - __main__ - INFO - Total Nodes (Entities): 154
+2026-05-05 11:42:26,298 - __main__ - INFO - Total Edges (Relationships): 143
+2026-05-05 11:42:26,298 - __main__ - WARNING - ⚠ Success criteria not met: Need >= 100 entities (got 154) and >= 200 relationships (got 143)
+2026-05-05 11:42:26,298 - __main__ - INFO - ============================================================
+2026-05-05 11:42:26,299 - __main__ - INFO - Knowledge Graph construction completed successfully!
+2026-05-05 11:42:26,299 - __main__ - INFO - ============================================================
+2026-05-05 11:42:26,299 - __main__ - INFO - You can now visualize the graph at: http://localhost:7474
+2026-05-05 11:42:26,300 - __main__ - INFO - Login with username: neo4j
+2026-05-05 11:42:26,300 - src.graph_builder - INFO - Neo4j connection closed
+2026-05-05 11:50:30,211 - __main__ - INFO - Loading configuration...
+2026-05-05 11:50:30,215 - __main__ - INFO - Configuration validated successfully
+2026-05-05 11:50:30,215 - __main__ - INFO - Initializing OpenAI client with model: gpt-4o-mini
+2026-05-05 11:50:30,321 - src.data_loader - INFO - DataLoader initialized with directory: data/
+2026-05-05 11:50:30,321 - src.entity_extractor - INFO - EntityExtractor initialized with model: gpt-4o-mini
+2026-05-05 11:50:30,379 - src.graph_builder - INFO - Successfully connected to Neo4j at bolt://localhost:7687
+2026-05-05 11:50:30,379 - __main__ - INFO - ============================================================
+2026-05-05 11:50:30,380 - __main__ - INFO - STEP 1: Loading markdown files
+2026-05-05 11:50:30,380 - __main__ - INFO - ============================================================
+2026-05-05 11:50:30,381 - src.data_loader - INFO - Found 5 markdown files in data/
+2026-05-05 11:50:30,383 - src.data_loader - INFO - Successfully loaded: ChatGPT.md (32942 characters)
+2026-05-05 11:50:30,385 - src.data_loader - INFO - Successfully loaded: Gemini (chatbot).md (3553 characters)
+2026-05-05 11:50:30,386 - src.data_loader - INFO - Successfully loaded: Gemini.md (18328 characters)
+2026-05-05 11:50:30,387 - src.data_loader - INFO - Successfully loaded: Google AI.md (2767 characters)
+2026-05-05 11:50:30,388 - src.data_loader - INFO - Successfully loaded: OpenAI.md (11014 characters)
+2026-05-05 11:50:30,389 - src.data_loader - INFO - Loaded 5 markdown files successfully
+2026-05-05 11:50:30,389 - __main__ - INFO - Loaded 5 markdown files
+2026-05-05 11:50:30,389 - __main__ - INFO - ============================================================
+2026-05-05 11:50:30,390 - __main__ - INFO - STEP 2: Extracting entities and relationships
+2026-05-05 11:50:30,391 - __main__ - INFO - ============================================================
+2026-05-05 11:50:30,391 - __main__ - INFO - Processing ChatGPT.md...
+2026-05-05 11:50:30,392 - src.entity_extractor - INFO - Extracting entities from ChatGPT.md (32942 characters)
+2026-05-05 11:50:30,393 - src.entity_extractor - INFO - Split into 13 chunks for processing
+2026-05-05 11:50:30,394 - src.entity_extractor - INFO - Processing chunk 1/13 (3342 characters)
+2026-05-05 11:50:40,962 - openai._base_client - INFO - Retrying request to /chat/completions in 0.386018 seconds
+2026-05-05 11:50:51,429 - openai._base_client - INFO - Retrying request to /chat/completions in 0.787986 seconds
+2026-05-05 11:52:10,825 - __main__ - INFO - Loading configuration...
+2026-05-05 11:52:10,829 - __main__ - INFO - Configuration validated successfully
+2026-05-05 11:52:10,829 - __main__ - INFO - Initializing OpenAI client with model: gpt-4o-mini
+2026-05-05 11:52:10,905 - src.data_loader - INFO - DataLoader initialized with directory: data/
+2026-05-05 11:52:10,905 - src.entity_extractor - INFO - EntityExtractor initialized with model: gpt-4o-mini
+2026-05-05 11:52:10,958 - src.graph_builder - INFO - Successfully connected to Neo4j at bolt://localhost:7687
+2026-05-05 11:52:10,959 - __main__ - INFO - ============================================================
+2026-05-05 11:52:10,959 - __main__ - INFO - STEP 1: Loading markdown files
+2026-05-05 11:52:10,959 - __main__ - INFO - ============================================================
+2026-05-05 11:52:10,960 - src.data_loader - INFO - Found 5 markdown files in data/
+2026-05-05 11:52:10,960 - src.data_loader - INFO - Successfully loaded: ChatGPT.md (32942 characters)
+2026-05-05 11:52:10,961 - src.data_loader - INFO - Successfully loaded: Gemini (chatbot).md (3553 characters)
+2026-05-05 11:52:10,961 - src.data_loader - INFO - Successfully loaded: Gemini.md (18328 characters)
+2026-05-05 11:52:10,962 - src.data_loader - INFO - Successfully loaded: Google AI.md (2767 characters)
+2026-05-05 11:52:10,962 - src.data_loader - INFO - Successfully loaded: OpenAI.md (11014 characters)
+2026-05-05 11:52:10,962 - src.data_loader - INFO - Loaded 5 markdown files successfully
+2026-05-05 11:52:10,963 - __main__ - INFO - Loaded 5 markdown files
+2026-05-05 11:52:10,963 - __main__ - INFO - ============================================================
+2026-05-05 11:52:10,963 - __main__ - INFO - STEP 2: Extracting entities and relationships
+2026-05-05 11:52:10,963 - __main__ - INFO - ============================================================
+2026-05-05 11:52:10,964 - __main__ - INFO - Processing ChatGPT.md...
+2026-05-05 11:52:10,964 - src.entity_extractor - INFO - Extracting entities from ChatGPT.md (32942 characters)
+2026-05-05 11:52:10,964 - src.entity_extractor - INFO - Split into 13 chunks for processing
+2026-05-05 11:52:10,964 - src.entity_extractor - INFO - Processing chunk 1/13 (3342 characters)
+2026-05-05 11:52:17,332 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:52:17,913 - src.entity_extractor - INFO -   -> Extracted 4 triples from chunk 1
+2026-05-05 11:52:17,913 - src.entity_extractor - INFO - Processing chunk 2/13 (3299 characters)
+2026-05-05 11:52:36,275 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:52:36,288 - src.entity_extractor - INFO -   -> Extracted 15 triples from chunk 2
+2026-05-05 11:52:36,288 - src.entity_extractor - INFO - Processing chunk 3/13 (3218 characters)
+2026-05-05 11:52:55,792 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:52:55,804 - src.entity_extractor - INFO -   -> Extracted 24 triples from chunk 3
+2026-05-05 11:52:55,805 - src.entity_extractor - INFO - Processing chunk 4/13 (3218 characters)
+2026-05-05 11:53:20,355 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:53:20,362 - src.entity_extractor - INFO -   -> Extracted 20 triples from chunk 4
+2026-05-05 11:53:20,362 - src.entity_extractor - INFO - Processing chunk 5/13 (2707 characters)
+2026-05-05 11:53:34,697 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:53:34,703 - src.entity_extractor - INFO -   -> Extracted 12 triples from chunk 5
+2026-05-05 11:53:34,703 - src.entity_extractor - INFO - Processing chunk 6/13 (3265 characters)
+2026-05-05 11:53:46,924 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:53:46,932 - src.entity_extractor - INFO -   -> Extracted 11 triples from chunk 6
+2026-05-05 11:53:46,932 - src.entity_extractor - INFO - Processing chunk 7/13 (3192 characters)
+2026-05-05 11:54:04,487 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:54:04,505 - src.entity_extractor - INFO -   -> Extracted 14 triples from chunk 7
+2026-05-05 11:54:04,505 - src.entity_extractor - INFO - Processing chunk 8/13 (3398 characters)
+2026-05-05 11:54:13,512 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:54:13,518 - src.entity_extractor - INFO -   -> Extracted 9 triples from chunk 8
+2026-05-05 11:54:13,519 - src.entity_extractor - INFO - Processing chunk 9/13 (1182 characters)
+2026-05-05 11:54:23,432 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:54:23,444 - src.entity_extractor - INFO -   -> Extracted 9 triples from chunk 9
+2026-05-05 11:54:23,445 - src.entity_extractor - INFO - Processing chunk 10/13 (2969 characters)
+2026-05-05 11:54:42,630 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:54:42,631 - src.entity_extractor - INFO -   -> Extracted 22 triples from chunk 10
+2026-05-05 11:54:42,632 - src.entity_extractor - INFO - Processing chunk 11/13 (3044 characters)
+2026-05-05 11:54:59,345 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:54:59,357 - src.entity_extractor - INFO -   -> Extracted 17 triples from chunk 11
+2026-05-05 11:54:59,357 - src.entity_extractor - INFO - Processing chunk 12/13 (3334 characters)
+2026-05-05 11:55:15,079 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:55:15,081 - src.entity_extractor - INFO -   -> Extracted 14 triples from chunk 12
+2026-05-05 11:55:15,082 - src.entity_extractor - INFO - Processing chunk 13/13 (294 characters)
+2026-05-05 11:55:16,020 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:55:16,045 - src.entity_extractor - INFO -   -> Extracted 0 triples from chunk 13
+2026-05-05 11:55:16,046 - src.entity_extractor - INFO - Extracted 171 triples, 156 unique triples from ChatGPT.md
+2026-05-05 11:55:16,046 - __main__ - INFO -   -> Extracted 156 triples from ChatGPT.md
+2026-05-05 11:55:16,047 - __main__ - INFO - Processing Gemini (chatbot).md...
+2026-05-05 11:55:16,047 - src.entity_extractor - INFO - Extracting entities from Gemini (chatbot).md (3553 characters)
+2026-05-05 11:55:16,048 - src.entity_extractor - INFO - Split into 2 chunks for processing
+2026-05-05 11:55:16,048 - src.entity_extractor - INFO - Processing chunk 1/2 (3011 characters)
+2026-05-05 11:55:30,421 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:55:30,426 - src.entity_extractor - INFO -   -> Extracted 15 triples from chunk 1
+2026-05-05 11:55:30,427 - src.entity_extractor - INFO - Processing chunk 2/2 (965 characters)
+2026-05-05 11:55:49,484 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:55:49,528 - src.entity_extractor - INFO -   -> Extracted 14 triples from chunk 2
+2026-05-05 11:55:49,529 - src.entity_extractor - INFO - Extracted 29 triples, 29 unique triples from Gemini (chatbot).md
+2026-05-05 11:55:49,529 - __main__ - INFO -   -> Extracted 29 triples from Gemini (chatbot).md
+2026-05-05 11:55:49,530 - __main__ - INFO - Processing Gemini.md...
+2026-05-05 11:55:49,530 - src.entity_extractor - INFO - Extracting entities from Gemini.md (18328 characters)
+2026-05-05 11:55:49,531 - src.entity_extractor - INFO - Split into 8 chunks for processing
+2026-05-05 11:55:49,531 - src.entity_extractor - INFO - Processing chunk 1/8 (3110 characters)
+2026-05-05 11:55:59,118 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:55:59,120 - src.entity_extractor - INFO -   -> Extracted 8 triples from chunk 1
+2026-05-05 11:55:59,120 - src.entity_extractor - INFO - Processing chunk 2/8 (3018 characters)
+2026-05-05 11:56:07,073 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:56:07,077 - src.entity_extractor - INFO -   -> Extracted 6 triples from chunk 2
+2026-05-05 11:56:07,078 - src.entity_extractor - INFO - Processing chunk 3/8 (3100 characters)
+2026-05-05 11:56:19,274 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:56:19,276 - src.entity_extractor - INFO -   -> Extracted 10 triples from chunk 3
+2026-05-05 11:56:19,276 - src.entity_extractor - INFO - Processing chunk 4/8 (3270 characters)
+2026-05-05 11:56:40,256 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:56:40,271 - src.entity_extractor - INFO -   -> Extracted 19 triples from chunk 4
+2026-05-05 11:56:40,271 - src.entity_extractor - INFO - Processing chunk 5/8 (3391 characters)
+2026-05-05 11:56:59,632 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:56:59,637 - src.entity_extractor - INFO -   -> Extracted 17 triples from chunk 5
+2026-05-05 11:56:59,638 - src.entity_extractor - INFO - Processing chunk 6/8 (3068 characters)
+2026-05-05 11:57:22,692 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:57:22,696 - src.entity_extractor - INFO -   -> Extracted 21 triples from chunk 6
+2026-05-05 11:57:22,697 - src.entity_extractor - INFO - Processing chunk 7/8 (3072 characters)
+2026-05-05 11:57:46,784 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:57:46,799 - src.entity_extractor - INFO -   -> Extracted 24 triples from chunk 7
+2026-05-05 11:57:46,799 - src.entity_extractor - INFO - Processing chunk 8/8 (1372 characters)
+2026-05-05 11:57:56,813 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:57:56,827 - src.entity_extractor - INFO -   -> Extracted 7 triples from chunk 8
+2026-05-05 11:57:56,828 - src.entity_extractor - INFO - Extracted 112 triples, 85 unique triples from Gemini.md
+2026-05-05 11:57:56,829 - __main__ - INFO -   -> Extracted 85 triples from Gemini.md
+2026-05-05 11:57:56,830 - __main__ - INFO - Processing Google AI.md...
+2026-05-05 11:57:56,831 - src.entity_extractor - INFO - Extracting entities from Google AI.md (2767 characters)
+2026-05-05 11:57:56,832 - src.entity_extractor - INFO - Split into 1 chunks for processing
+2026-05-05 11:57:56,832 - src.entity_extractor - INFO - Processing chunk 1/1 (2767 characters)
+2026-05-05 11:58:16,691 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:58:16,693 - src.entity_extractor - INFO -   -> Extracted 22 triples from chunk 1
+2026-05-05 11:58:16,694 - src.entity_extractor - INFO - Extracted 22 triples, 22 unique triples from Google AI.md
+2026-05-05 11:58:16,694 - __main__ - INFO -   -> Extracted 22 triples from Google AI.md
+2026-05-05 11:58:16,695 - __main__ - INFO - Processing OpenAI.md...
+2026-05-05 11:58:16,695 - src.entity_extractor - INFO - Extracting entities from OpenAI.md (11014 characters)
+2026-05-05 11:58:16,696 - src.entity_extractor - INFO - Split into 4 chunks for processing
+2026-05-05 11:58:16,697 - src.entity_extractor - INFO - Processing chunk 1/4 (2638 characters)
+2026-05-05 11:58:33,629 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:58:33,641 - src.entity_extractor - INFO -   -> Extracted 18 triples from chunk 1
+2026-05-05 11:58:33,641 - src.entity_extractor - INFO - Processing chunk 2/4 (3292 characters)
+2026-05-05 11:58:46,740 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:58:46,763 - src.entity_extractor - INFO -   -> Extracted 14 triples from chunk 2
+2026-05-05 11:58:46,764 - src.entity_extractor - INFO - Processing chunk 3/4 (3477 characters)
+2026-05-05 11:59:00,539 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:59:00,539 - src.entity_extractor - INFO -   -> Extracted 13 triples from chunk 3
+2026-05-05 11:59:00,540 - src.entity_extractor - INFO - Processing chunk 4/4 (3072 characters)
+2026-05-05 11:59:13,574 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-05 11:59:13,578 - src.entity_extractor - INFO -   -> Extracted 13 triples from chunk 4
+2026-05-05 11:59:13,579 - src.entity_extractor - INFO - Extracted 58 triples, 56 unique triples from OpenAI.md
+2026-05-05 11:59:13,579 - __main__ - INFO -   -> Extracted 56 triples from OpenAI.md
+2026-05-05 11:59:13,579 - __main__ - INFO - Total triples extracted: 348
+2026-05-05 11:59:13,580 - __main__ - INFO - ============================================================
+2026-05-05 11:59:13,580 - __main__ - INFO - STEP 3: Building Knowledge Graph in Neo4j
+2026-05-05 11:59:13,580 - __main__ - INFO - ============================================================
+2026-05-05 11:59:13,581 - src.graph_builder - INFO - Building graph from 348 triples
+2026-05-05 11:59:13,652 - src.graph_builder - INFO - Created index on entity name_lower
+2026-05-05 11:59:13,692 - neo4j.notifications - INFO - Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description="note: successful completion - index or constraint already exists. The command 'CREATE RANGE INDEX entity_name_lower IF NOT EXISTS FOR (e:Entity) ON (e.name_lower)' has no effect. The index or constraint specified by 'RANGE INDEX entity_name_lower FOR (e:Entity) ON (e.name_lower)' already exists.", position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE INDEX entity_name_lower IF NOT EXISTS FOR (e:Entity) ON (e.name_lower)'
+2026-05-05 11:59:13,699 - src.graph_builder - INFO - Created index on entity type
+2026-05-05 11:59:13,701 - neo4j.notifications - INFO - Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description="note: successful completion - index or constraint already exists. The command 'CREATE RANGE INDEX entity_type IF NOT EXISTS FOR (e:Entity) ON (e.type)' has no effect. The index or constraint specified by 'RANGE INDEX entity_type FOR (e:Entity) ON (e.type)' already exists.", position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE INDEX entity_type IF NOT EXISTS FOR (e:Entity) ON (e.type)'
+2026-05-05 11:59:18,181 - src.graph_builder - INFO - Processed 100/348 triples
+2026-05-05 11:59:22,602 - src.graph_builder - INFO - Processed 200/348 triples
+2026-05-05 11:59:26,434 - src.graph_builder - INFO - Processed 300/348 triples
+2026-05-05 11:59:28,284 - src.graph_builder - INFO - Processed 348/348 triples
+2026-05-05 11:59:28,311 - src.graph_builder - INFO - Graph construction complete: 356 nodes, 383 edges
+2026-05-05 11:59:28,311 - __main__ - INFO - ============================================================
+2026-05-05 11:59:28,312 - __main__ - INFO - STEP 4: Graph Statistics
+2026-05-05 11:59:28,313 - __main__ - INFO - ============================================================
+2026-05-05 11:59:28,324 - __main__ - INFO - Total Nodes (Entities): 356
+2026-05-05 11:59:28,325 - __main__ - INFO - Total Edges (Relationships): 383
+2026-05-05 11:59:28,325 - __main__ - INFO - ✓ Success criteria met: >= 100 entities and >= 200 relationships
+2026-05-05 11:59:28,326 - __main__ - INFO - ============================================================
+2026-05-05 11:59:28,326 - __main__ - INFO - Knowledge Graph construction completed successfully!
+2026-05-05 11:59:28,327 - __main__ - INFO - ============================================================
+2026-05-05 11:59:28,327 - __main__ - INFO - You can now visualize the graph at: http://localhost:7474
+2026-05-05 11:59:28,328 - __main__ - INFO - Login with username: neo4j
+2026-05-05 11:59:28,329 - src.graph_builder - INFO - Neo4j connection closed

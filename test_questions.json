@@ -1,0 +1,263 @@
+{
+  "metadata": {
+    "title": "GraphRAG Test Questions - Tech Company Corpus",
+    "description": "20 câu hỏi benchmark để so sánh Flat RAG vs GraphRAG",
+    "total_questions": 20,
+    "data_sources": [
+      "data/ChatGPT.md",
+      "data/Gemini.md",
+      "data/Gemini (chatbot).md",
+      "data/Google AI.md",
+      "data/OpenAI.md"
+    ],
+    "created_date": "2026-05-05"
+  },
+  "evaluation_criteria": {
+    "accuracy": "Câu trả lời có đúng không?",
+    "completeness": "Có đủ thông tin không?",
+    "hallucination": "Có bịa đặt thông tin không?",
+    "context_understanding": "Có hiểu đúng mối quan hệ không?"
+  },
+  "question_groups": [
+    {
+      "group_id": 1,
+      "group_name": "Câu hỏi Đơn giản (Single-hop)",
+      "description": "Những câu hỏi có thể trả lời từ một đoạn văn bản duy nhất",
+      "difficulty": "easy",
+      "expected_performance": {
+        "flat_rag": "good",
+        "graph_rag": "good"
+      },
+      "questions": [
+        {
+          "id": 1,
+          "question": "ChatGPT được phát hành vào tháng nào năm nào?",
+          "answer": "Tháng 11 năm 2022",
+          "type": "factual",
+          "entities": ["ChatGPT"],
+          "source_file": "data/ChatGPT.md"
+        },
+        {
+          "id": 2,
+          "question": "Ai là CEO của OpenAI?",
+          "answer": "Sam Altman",
+          "type": "factual",
+          "entities": ["OpenAI", "Sam Altman"],
+          "source_file": "data/OpenAI.md"
+        },
+        {
+          "id": 3,
+          "question": "Gemini trước đây có tên gọi là gì?",
+          "answer": "Bard",
+          "type": "factual",
+          "entities": ["Gemini", "Bard"],
+          "source_file": "data/Gemini (chatbot).md"
+        },
+        {
+          "id": 4,
+          "question": "GPT-4 được công bố vào ngày nào?",
+          "answer": "14 tháng 3 năm 2023",
+          "type": "factual",
+          "entities": ["GPT-4"],
+          "source_file": "data/OpenAI.md"
+        },
+        {
+          "id": 5,
+          "question": "Google AI được công bố tại sự kiện nào?",
+          "answer": "Google I/O năm 2017",
+          "type": "factual",
+          "entities": ["Google AI", "Google I/O"],
+          "source_file": "data/Google AI.md"
+        }
+      ]
+    },
+    {
+      "group_id": 2,
+      "group_name": "Câu hỏi Quan hệ (Relationship)",
+      "description": "Những câu hỏi yêu cầu hiểu mối quan hệ giữa các thực thể",
+      "difficulty": "medium",
+      "expected_performance": {
+        "flat_rag": "moderate",
+        "graph_rag": "good"
+      },
+      "questions": [
+        {
+          "id": 6,
+          "question": "OpenAI được thành lập bởi những ai?",
+          "answer": "Sam Altman, Reid Hoffman, Jessica Livingston, Elon Musk, Ilya Sutskever, Peter Thiel và những người khác",
+          "type": "relationship",
+          "entities": ["OpenAI", "Sam Altman", "Reid Hoffman", "Jessica Livingston", "Elon Musk", "Ilya Sutskever", "Peter Thiel"],
+          "relationships": ["FOUNDED_BY"],
+          "source_file": "data/OpenAI.md"
+        },
+        {
+          "id": 7,
+          "question": "Microsoft đã đầu tư bao nhiêu vào OpenAI vào năm 2023?",
+          "answer": "10 tỷ USD",
+          "type": "relationship",
+          "entities": ["Microsoft", "OpenAI"],
+          "relationships": ["INVESTED_IN"],
+          "source_file": "data/OpenAI.md"
+        },
+        {
+          "id": 8,
+          "question": "Gemini được phát triển bởi công ty nào?",
+          "answer": "Google DeepMind",
+          "type": "relationship",
+          "entities": ["Gemini", "Google DeepMind"],
+          "relationships": ["DEVELOPED_BY"],
+          "source_file": "data/Gemini.md"
+        },
+        {
+          "id": 9,
+          "question": "ChatGPT sử dụng mô hình nền tảng nào?",
+          "answer": "GPT (Generative Pre-trained Transformer), cụ thể là GPT-5.2 trong phiên bản hiện tại",
+          "type": "relationship",
+          "entities": ["ChatGPT", "GPT", "GPT-5.2"],
+          "relationships": ["USES_MODEL"],
+          "source_file": "data/ChatGPT.md"
+        },
+        {
+          "id": 10,
+          "question": "Ai là đồng sáng lập Google đã quay lại viết mã cho Gemini?",
+          "answer": "Sergey Brin",
+          "type": "relationship",
+          "entities": ["Sergey Brin", "Google", "Gemini"],
+          "relationships": ["CO_FOUNDED", "WORKED_ON"],
+          "source_file": "data/Gemini.md"
+        }
+      ]
+    },
+    {
+      "group_id": 3,
+      "group_name": "Câu hỏi So sánh (Comparison)",
+      "description": "Những câu hỏi yêu cầu so sánh giữa các thực thể khác nhau",
+      "difficulty": "medium-hard",
+      "expected_performance": {
+        "flat_rag": "moderate",
+        "graph_rag": "very_good"
+      },
+      "questions": [
+        {
+          "id": 11,
+          "question": "So sánh thời gian ra mắt giữa ChatGPT và Bard/Gemini?",
+          "answer": "ChatGPT ra mắt tháng 11/2022, Bard ra mắt tháng 3/2023",
+          "type": "comparison",
+          "entities": ["ChatGPT", "Bard", "Gemini"],
+          "comparison_attributes": ["release_date"],
+          "source_files": ["data/ChatGPT.md", "data/Gemini (chatbot).md"]
+        },
+        {
+          "id": 12,
+          "question": "GPT-3 có bao nhiêu tham số so với GPT-2?",
+          "answer": "GPT-3 có 175 tỷ tham số, lớn hơn GPT-2 (1,5 tỷ tham số) khoảng 100 lần",
+          "type": "comparison",
+          "entities": ["GPT-3", "GPT-2"],
+          "comparison_attributes": ["parameters"],
+          "source_file": "data/OpenAI.md"
+        },
+        {
+          "id": 13,
+          "question": "Gemini 3.1 Pro đạt bao nhiêu phần trăm trong bài kiểm tra Humanity's Last Exam so với GPT-5.4?",
+          "answer": "Gemini 3.1 Pro đạt 45,9%, vượt GPT-5.4 (40,3%)",
+          "type": "comparison",
+          "entities": ["Gemini 3.1 Pro", "GPT-5.4"],
+          "comparison_attributes": ["test_score"],
+          "source_file": "data/Gemini.md"
+        },
+        {
+          "id": 14,
+          "question": "ChatGPT đạt bao nhiêu người dùng trong bao lâu so với TikTok?",
+          "answer": "ChatGPT đạt 100 triệu người dùng trong 2 tháng, TikTok cần 9 tháng",
+          "type": "comparison",
+          "entities": ["ChatGPT", "TikTok"],
+          "comparison_attributes": ["user_growth"],
+          "source_file": "data/ChatGPT.md"
+        },
+        {
+          "id": 15,
+          "question": "So sánh khả năng đa phương thức giữa GPT-4 và Gemini?",
+          "answer": "GPT-4 huấn luyện các thành phần riêng biệt rồi ghép lại, Gemini được thiết kế 'đa phương thức bản địa' (native multimodal) ngay từ đầu",
+          "type": "comparison",
+          "entities": ["GPT-4", "Gemini"],
+          "comparison_attributes": ["multimodal_capability", "architecture"],
+          "source_files": ["data/OpenAI.md", "data/Gemini.md"]
+        }
+      ]
+    },
+    {
+      "group_id": 4,
+      "group_name": "Câu hỏi Đa bước (Multi-hop)",
+      "description": "Những câu hỏi yêu cầu kết nối thông tin từ nhiều nguồn khác nhau",
+      "difficulty": "hard",
+      "expected_performance": {
+        "flat_rag": "poor",
+        "graph_rag": "excellent"
+      },
+      "questions": [
+        {
+          "id": 16,
+          "question": "Mô tả lịch sử phát triển của chatbot từ OpenAI đến Google?",
+          "answer": "OpenAI ra mắt ChatGPT (11/2022) dựa trên GPT-3 → Gây sốt toàn cầu → Google phản ứng bằng cách phát hành Bard (3/2023) dựa trên LaMDA → Sau đó nâng cấp lên Gemini (12/2023) → Đổi tên Bard thành Gemini (2/2024)",
+          "type": "multi_hop",
+          "entities": ["OpenAI", "ChatGPT", "GPT-3", "Google", "Bard", "LaMDA", "Gemini"],
+          "hops": 4,
+          "source_files": ["data/ChatGPT.md", "data/OpenAI.md", "data/Gemini (chatbot).md", "data/Gemini.md"]
+        },
+        {
+          "id": 17,
+          "question": "Truy vết mối quan hệ giữa Microsoft, OpenAI và ChatGPT?",
+          "answer": "Microsoft đầu tư 1 tỷ USD vào OpenAI (2019) → OpenAI phát triển ChatGPT (2022) → Microsoft đầu tư thêm 10 tỷ USD (1/2023) → Microsoft tích hợp ChatGPT vào Bing và các sản phẩm khác",
+          "type": "multi_hop",
+          "entities": ["Microsoft", "OpenAI", "ChatGPT", "Bing"],
+          "relationships": ["INVESTED_IN", "DEVELOPED", "INTEGRATED_INTO"],
+          "hops": 3,
+          "source_files": ["data/OpenAI.md", "data/ChatGPT.md"]
+        },
+        {
+          "id": 18,
+          "question": "Gemini đã trải qua những phiên bản nào và có những cải tiến gì?",
+          "answer": "Bard (LaMDA) → Gemini 1.0 (12/2023, 3 phiên bản: Ultra, Pro, Nano) → Gemini 1.5 (2/2024, ngữ cảnh 1-2 triệu token) → Gemini 2.0 (1/2025, Multimodal Live API) → Gemini 2.5 Pro (3/2025, Thinking Model) → Gemini 3 (11/2025, chiến thắng 19/20 benchmark) → Gemini 3.1 Pro (2/2026)",
+          "type": "multi_hop",
+          "entities": ["Bard", "LaMDA", "Gemini 1.0", "Gemini 1.5", "Gemini 2.0", "Gemini 2.5 Pro", "Gemini 3", "Gemini 3.1 Pro"],
+          "hops": 7,
+          "source_files": ["data/Gemini (chatbot).md", "data/Gemini.md"]
+        },
+        {
+          "id": 19,
+          "question": "Các mô hình tạo hình ảnh của OpenAI và Google là gì và chúng được tích hợp như thế nào?",
+          "answer": "OpenAI: DALL-E (2021) → DALL-E 2 (4/2022) → Tích hợp vào ChatGPT (10/2023) → GPT Image (3/2025). Google: Imagen → Imagen 2 → Nano Banana (8/2025) → Nano Banana Pro (11/2025) → Nano Banana 2 (2/2026)",
+          "type": "multi_hop",
+          "entities": ["OpenAI", "DALL-E", "DALL-E 2", "ChatGPT", "GPT Image", "Google", "Imagen", "Imagen 2", "Nano Banana", "Nano Banana Pro", "Nano Banana 2"],
+          "relationships": ["DEVELOPED", "INTEGRATED_INTO", "UPGRADED_TO"],
+          "hops": 5,
+          "source_files": ["data/OpenAI.md", "data/ChatGPT.md", "data/Gemini.md"]
+        },
+        {
+          "id": 20,
+          "question": "Mô tả sự cạnh tranh giữa OpenAI và Google trong lĩnh vực AI tạo sinh?",
+          "answer": "OpenAI dẫn đầu với ChatGPT (11/2022) → Google phản ứng với 'mã đỏ', phát hành Bard (3/2023) nhưng gặp sự cố → Google nâng cấp lên Gemini và đuổi kịp → Gemini 3 (11/2025) vượt GPT-5.4 → OpenAI phản ứng với GPT-5.2 (12/2025) → Cuộc đua tiếp tục với Gemini 3.1 Pro (2/2026)",
+          "type": "multi_hop",
+          "entities": ["OpenAI", "ChatGPT", "Google", "Bard", "Gemini", "Gemini 3", "GPT-5.4", "GPT-5.2", "Gemini 3.1 Pro"],
+          "relationships": ["COMPETED_WITH", "RESPONDED_TO", "SURPASSED"],
+          "hops": 6,
+          "source_files": ["data/ChatGPT.md", "data/OpenAI.md", "data/Gemini (chatbot).md", "data/Gemini.md"]
+        }
+      ]
+    }
+  ],
+  "usage_instructions": {
+    "how_to_evaluate": [
+      "Chạy mỗi câu hỏi trên cả Flat RAG và GraphRAG",
+      "So sánh câu trả lời với đáp án chuẩn",
+      "Đánh giá theo 4 tiêu chí: accuracy, completeness, hallucination, context_understanding",
+      "Ghi lại thời gian phản hồi và token usage"
+    ],
+    "expected_results": {
+      "group_1": "Cả hai hệ thống đều trả lời tốt",
+      "group_2": "GraphRAG bắt đầu có lợi thế",
+      "group_3": "GraphRAG tốt hơn rõ rệt",
+      "group_4": "GraphRAG vượt trội, Flat RAG dễ bị hallucination"
+    }
+  }
+}
